@@ -84,7 +84,7 @@ function gitMembers() {
                 type: "list",
                 name: "memberChoice",
                 message: "Would you like to add another team member?",
-                coices: [
+                choices: [
                     "Engineer",
                     "Intern",
                     "No more members to add",
@@ -93,10 +93,10 @@ function gitMembers() {
         ]).then(userChoice => {
             switch (userChoice.memberChoice) {
                 case "Engineer":
-                    addEngineer();
+                    gitEngineer();
                     break;
                 case "Intern":
-                    addIntern();
+                    gitIntern();
                     break;
                 default:
                     generateHTML();
@@ -222,8 +222,9 @@ function gitIntern() {
         addMember();
     });    
 }
-
-
-
-
+function generateHTML() {
+    console.log("Building Team Profile!");
+    }
+    gitManager();
 }
+gitMembers();
