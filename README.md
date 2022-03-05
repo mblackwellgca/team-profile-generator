@@ -11,6 +11,15 @@ A Node.js command-line application that takes in information about employees on 
     * I WANT to generate a webpage that displays my team's basic info
     * SO THAT I have quick access to their emails and GitHub profiles
 
+This project is a command-line application for creating an HTML page of a team profile based on user inputs for the following:
+
+* Team Manager name, employee id, email, and office number
+* Whether there are additional employees on the team
+* If an employee is an engineer or intern
+* An engineer's name, employee id, email, and GitHub username
+* An intern's name, employee id, email, and school
+* The application uses the node inquirer package for prompting questions in command-line. It also uses jest to run the tests for the application.
+
 ## Installation
 * [Jest](https://www.npmjs.com/package/jest) for running the unit tests 
 * [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. 
