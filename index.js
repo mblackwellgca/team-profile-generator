@@ -30,7 +30,6 @@ function gitMembers() {
                     }
                     return "Please enter the team manager's name.";
                 }
-
             },
             {
                 type: "input",
@@ -42,7 +41,6 @@ function gitMembers() {
                     }
                     return "Please enter the team manager's ID.";
                 }
-
             },
             {
                 type: "input",
@@ -54,7 +52,6 @@ function gitMembers() {
                     }
                     return "Please enter the team manager's entire email address.";
                 }
-
             },
             {
                 type: "input",
@@ -67,7 +64,6 @@ function gitMembers() {
                     }
                     return "Please enter the team manager's work phone number. (No spaces or dashes)";
                 }
-
             }
         ])
             .then(answers => {
@@ -81,13 +77,151 @@ function gitMembers() {
                 addMember();
             });
     }
+   // Adding team members function
     function addMember() {
-        
+        inquirer.prompt([
+            {
+                type: "list",
+                name: "memberChoice",
+                message: "Would you like to add another team member?",
+                coices: [
+                    "Engineer",
+                    "Intern",
+                    "No more members to add",
+                ]
+            }
+        ]).then(userChoice => {
+            switch (userChoice.memberChoice) {
+                case "Engineer":
+                    addEngineer();
+                    break;
+                case "Intern":
+                    addIntern();
+                    break;
+                default:
+                    generateHTML();
+            }
+        });
     }
 
-
-
-
+// Adding Engineer function
+    function gitEngineer() {
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "engineerName",
+                message: "What is the engineer's name?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the engineer's name.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerId",
+                message: "What is the engineer's ID?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the engineer's ID.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerEmail",
+                message: "What is the engineer's email address?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the engineer's entire email address.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is the engineer's Github username?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the engineer's github username.";
+                }
+            }
+        ])   
+        .then(answers => {
+            const engineer = new Engineer (
+                answers.engineerName,
+                answers.engineerID,
+                answers.engineerEmail,
+                answers.engineerGithub
+            );
+            teamMembers.push(engineer);
+            addMember();
+        });    
+    }
+// Adding Intern function
+function gitIntern() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "internName",
+            message: "What is the intern's name?",
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                }
+                return "Please enter the intern's name.";
+            }
+        },
+        {
+            type: "input",
+            name: "internId",
+            message: "What is the intern's ID?",
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                }
+                return "Please enter the intern's ID.";
+            }
+        },
+        {
+            type: "input",
+            name: "internEmail",
+            message: "What is the intern's email address?",
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                }
+                return "Please enter the intern's entire email address.";
+            }
+        },
+        {
+            type: "input",
+            name: "internSchool",
+            message: "What is the is the intern's school?",
+            validate: answer => {
+                if (answer !== "") {
+                    return true;
+                }
+                return "Please enter the intern's school.";
+            }
+        }
+    ])   
+    .then(answers => {
+        const intern = new Intern (
+            answers.internName,
+            answers.internID,
+            answers.internEmail,
+            answers.internGithub
+        );
+        teamMembers.push(intern);
+        addMember();
+    });    
+}
 
 
 
