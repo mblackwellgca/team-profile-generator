@@ -3,6 +3,7 @@
 A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
 ## Live Links
+* 📽️ Demo: https://screencast-o-matic.com/watch/c3e1r9VF1wv 
 * 🌍 Published: https://mblackwellgca.github.io/team-profile-generator/
 * 🌍 Repository: https://github.com/mblackwellgca/team-profile-generator
 
@@ -52,7 +53,9 @@ GIVEN a command-line application that accepts user input
 ## Usage
 The following animation demonstrates the application functionality:
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info..](./dist/assets/images/Team_Profile_Generator.png)
+* ![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info..](./dist/assets/images/Team_Profile_Generator.png)
+* ![passed tests image](./dist/assets/images/passed_tests.png)
+* ![question prompts](./dist/assets/images/question_prompts.png)
 
 ## Credits:
 * 🏫 Sandra Smith
