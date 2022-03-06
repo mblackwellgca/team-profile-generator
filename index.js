@@ -2,7 +2,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
+
+// Locations
 const template = require('./src/template.js');
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const output = path.join(DIST_DIR, 'index.html');
 
 // Constructors
 const Employee = require('./lib/Employee');
@@ -68,7 +72,7 @@ function gitMembers() {
         ])
             .then(answers => {
                 const manager = new Manager (
-                    answers.namagerName,
+                    answers.managerName,
                     answers.managerID,
                     answers.managerEmail,
                     answers.managerOfficeNumber,
@@ -224,6 +228,7 @@ function gitIntern() {
 }
 function generateHTML() {
     console.log("Building Team Profile!");
+    fs.writeFileSync(output, template(teamMembers), "utf-8");
     }
     gitManager();
 }
