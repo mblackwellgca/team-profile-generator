@@ -1,8 +1,8 @@
 // Requirments needed for application - dependencies
 const fs = require('fs');
 const inquirer = require('inquirer');
-const jest = require('jest');
-//const path = require('path');
+const path = require('path');
+const template = require('./src/template.js');
 
 // Constructors
 const Employee = require('./lib/Employee');
