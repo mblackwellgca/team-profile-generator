@@ -14,5 +14,5 @@ test('get role', () => {
 test('manager office number via getOfficeNumber', () => {
     const value = 100;
     const manager = new Manager ('Tari', 1, 'tari@gmail.com', value);
-    expect(manager.officeNumber()).toBe(value);
+    expect(manager.getOfficeNumber()).toBe(value);
 });
