@@ -1,0 +1,49 @@
+:root {
+    /* galaxy image from https://unsplash.com/s/photos/galaxy */
+    --bg-image: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+  }
+
+  .jumbotron {
+      background-color: rgb(219, 219, 243);
+  }
+    
+  body {
+    font-family: sans-serif;
+    background-image: var(--bg-image);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card {
+    background-image: var(--bg-image);
+    margin: 1rem;
+    padding: 1rem;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 8px solid;
+    border-radius: 20px;
+    border-color: rgb(22, 126, 126);
+  }
+
+  .card-header {
+      margin-top: 20px;
+      color: rgb(2, 2, 29);
+      background-color: rgb(205, 175, 240);
+      font-size: large;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .card-body {
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+ 

@@ -13,7 +13,7 @@ function createHTML(teamMembers) {
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 jumbotron text-white mb-3">
+                <div class="col-12 jumbotron text-glow mb-3">
                     <h1 class="text-center">The Dream Team</h1>
                 </div>
             </div>

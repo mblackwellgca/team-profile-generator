@@ -73,7 +73,7 @@ function gitMembers() {
             .then(answers => {
                 const manager = new Manager (
                     answers.managerName,
-                    answers.managerID,
+                    answers.managerId,
                     answers.managerEmail,
                     answers.managerOfficeNumber,
                 );
@@ -159,7 +159,7 @@ function gitMembers() {
         .then(answers => {
             const engineer = new Engineer (
                 answers.engineerName,
-                answers.engineerID,
+                answers.engineerId,
                 answers.engineerEmail,
                 answers.engineerGithub
             );
@@ -218,9 +218,9 @@ function gitIntern() {
     .then(answers => {
         const intern = new Intern (
             answers.internName,
-            answers.internID,
+            answers.internId,
             answers.internEmail,
-            answers.internGithub
+            answers.internSchool,
         );
         teamMembers.push(intern);
         addMember();
