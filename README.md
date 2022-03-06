@@ -52,7 +52,7 @@ GIVEN a command-line application that accepts user input
 ## Usage
 The following animation demonstrates the application functionality:
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info..]()
+![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info..](./dist/assets/images/Team_Profile_Generator.png)
 
 ## Credits:
 * 🏫 Sandra Smith
